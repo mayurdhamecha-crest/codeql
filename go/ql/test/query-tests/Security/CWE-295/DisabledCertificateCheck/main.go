@@ -30,7 +30,7 @@ func good2(cfg *tls.Config, secure, selfCert, selfSign bool, options *opts, trus
 		cfg.InsecureSkipVerify = true // OK
 	}
 	if selfSign {
-		cfg.InsecureSkipVerify = true // OK
+		cfg.InsecureSkipVerify = false // OK
 	}
 	if !options.validateCertificates() {
 		cfg.InsecureSkipVerify = true // OK
